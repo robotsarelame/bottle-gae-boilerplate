@@ -1,12 +1,13 @@
 __author__ = 'IGulyaev'
 
 import bottle
-from bottle import route
+from bottle import route, template
 
 
 @route('/')
-def hello():
-    return "Hello World!"
+@route('/hello/:name')
+def index(name='World'):
+    return template('<b>Hello {{name}}</b>!', name=name)
 
 def gae_env():
     from google.appengine.ext.webapp.util import run_wsgi_app
