@@ -1,8 +1,9 @@
 application: bottle-gae-boilerplate
 version: 1
-runtime: python
+runtime: python27
 api_version: 1
+threadsafe: true
 
 handlers:
 - url: /.*
-  script: gae_main.py
+  script: gae_main.app

@@ -1,6 +1,6 @@
 __author__ = 'IGulyaev'
 
-import main
+import main, bottle
 
-if __name__ == '__main__':
-    main.gae_env()
+app = bottle.default_app()
+main.gae_env()
